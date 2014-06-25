@@ -1,15 +1,11 @@
-deep-equal-ident
-================
-
-Deep comparison with object identity checks.
+##Deep comparison with object identity checks
 
 This function performs a deep comparison between the two values `a` and `b`. It
 has the same signature and functionality as [lodash's isEqual function](http://lodash.com/docs#isEqual),
 with one difference: It also tracks the identity of nested objects.
 
----
 
-**Installation**
+### Installation
 
     npm install deep-equal-ident
     
@@ -19,9 +15,8 @@ and use as
     // ...
     var equal = deepEqualIdent(foo, bar);
 
----
 
-**So, what is this really about?**
+### So, what is this really about?
 
 Most deep equality tests (including `_.isEqual`) consider the following
 structures as equal:
