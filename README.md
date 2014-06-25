@@ -9,7 +9,19 @@ with one difference: It also tracks the identity of nested objects.
 
 ---
 
-**Example:**
+**Installation**
+
+    npm install deep-equal-ident
+    
+and use as
+
+    var deepEqualIdent = require('deep-equal-ident');
+    // ...
+    var equal = deepEqualIdent(foo, bar);
+
+---
+
+**So, what is this really about?**
 
 Most deep equality tests (including `_.isEqual`) consider the following
 structures as equal:
