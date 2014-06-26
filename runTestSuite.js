@@ -4,7 +4,7 @@
 
 function runTestSuite(name, deepEqualIdent) {
   describe(name, function() {
-    it('accepts identitcal structures', function() {
+    it('accepts identical structures', function() {
       var a = [1,2];
       var b = [1,2];
       var foo = [a, {x: a}];
@@ -52,7 +52,7 @@ function runTestSuite(name, deepEqualIdent) {
       expect(deepEqualIdent(foo, bar)).toBe(false);
     });
 
-    it("doesn't accept this weird cross-referential", function() {
+    it("doesn't accept this weird cross-referential structure", function() {
       var a = [1,2,3];
       var b = [1,2,3];
       var foo = [a, a];

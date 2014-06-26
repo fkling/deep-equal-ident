@@ -1,6 +1,6 @@
 {
   "name": "deep-equal-ident",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "A function to test for identical deep equality (based on lodash's isEqual).",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,9 @@
   "keywords": [
     "lodash",
     "equality",
-    "deep"
+    "deep",
+    "chai",
+    "testing"
   ],
   "author": "Felix Kling",
   "license": "MIT",
@@ -17,6 +19,7 @@
     "lodash.isequal": "^2.4.1"
   },
   "devDependencies": {
+    "chai": "^1.9.1",
     "jest-cli": "^0.1.15"
   },
   "repository": {

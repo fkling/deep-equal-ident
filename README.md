@@ -4,7 +4,8 @@ This function performs a deep comparison between the two values `a` and `b`. It
 has the same signature and functionality as [lodash's isEqual function](http://lodash.com/docs#isEqual),
 with one difference: It also tracks the identity of nested objects.
 
-This function is intended to be used for unit tests.
+This function is intended to be used for unit tests (see below how to use it
+with chai.js).
 
 ### So, what is this really about?
 
@@ -184,3 +185,25 @@ var equal = deepEqualIdent(foo, bar);
 ### Run tests
 
     npm test
+
+---
+
+### Use with chai.js
+
+This module provides integration with the [chai.js assertion framework](http://chaijs.com/)
+(for Node.js at least).
+Enable the extensions with
+
+    chai.use(require('deep-equal-ident/chai'));
+
+Then you can use either the `expect` or `assert` interface:
+
+```javascript
+// expect
+expect(foo).to.deep.identically.equal(bar);
+expect(foo).to.identically.eql(bar);
+
+// assert
+assert.deepEqualIdent(foo, bar);
+assert.NotDeepEqualIdent(foo, bar);
+```
