@@ -6,7 +6,7 @@ with one difference: It also tracks the identity of nested objects.
 
 This function is intended to be used for unit tests.
 
-### So, what is this really about (aka "your short description is rubbish")?
+### So, what is this really about?
 
 Most deep equality tests (including `_.isEqual`) consider the following
 structures as equal:
@@ -22,7 +22,7 @@ _.isEqual(foo , bar): // => true
 Here, `foo` contains two reference to the same object, but `bar` contains
 references to two different (not identical) objects. `a` and `b` might be itself
 considered as equal (they do after all contain the same values), but the
-*structure* of `foo` and `bar` are different.
+*structures* of `foo` and `bar` are different.
 
 `deepEqualIdent` will consider these values as not equal:
 
