@@ -13,8 +13,8 @@ Most deep equality tests (including `_.isEqual`) consider the following
 structures as equal:
 
 ```javascript
-var x = [1,2,3];
-var y = [1,2,3];
+var a = [1,2,3];
+var b = [1,2,3];
 var foo = [a, a];
 var bar = [a, b];
 _.isEqual(foo , bar): // => true
