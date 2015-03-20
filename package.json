@@ -16,11 +16,11 @@
   "author": "Felix Kling",
   "license": "MIT",
   "dependencies": {
-    "lodash.isequal": "^2.4.1"
+    "lodash.isequal": "^3.0"
   },
   "devDependencies": {
-    "chai": "^1.9.1",
-    "jest-cli": "^0.1.15"
+    "chai": "^2.1.0",
+    "jest-cli": "^0.4"
   },
   "repository": {
     "type": "git",
