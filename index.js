@@ -1,2 +1,4 @@
 /*jshint node:true*/
-module.exports = require('./deepEqualIdentTag');
+module.exports = typeof global.Map === 'function' ?
+  require('./deepEqualIdentMap') :
+  require('./deepEqualIdentTag');

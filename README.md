@@ -201,8 +201,12 @@ The result is the same as with tags.
 The disadvantage is that performance decreases the more objects have to be
 compared.
 
-#### Alternatively: Maps
+#### Maps
 
 The solution to the immutability and performance problems could be ES6 `Map`s,
-once they are supported by Node.js (and other engines) by default.
+assuming they are supported they are supported by the environment this code
+runs in.
+
+An implementation using Maps is included and is used if `global.Map` is
+available.
 
