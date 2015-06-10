@@ -19,8 +19,8 @@
     "lodash.isequal": "^3.0"
   },
   "devDependencies": {
-    "chai": "^2.1.0",
-    "jest-cli": "^0.4"
+    "chai": "^3.0.0",
+    "jest-cli": "^0.4.10"
   },
   "repository": {
     "type": "git",
