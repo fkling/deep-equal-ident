@@ -1,6 +1,5 @@
-[![Build Status](https://travis-ci.org/fkling/deep-equal-ident.svg?branch=master)](https://travis-ci.org/fkling/deep-equal-ident)
+## Deep comparison with object identity checks  [![Build Status](https://travis-ci.org/fkling/deep-equal-ident.svg?branch=master)](https://travis-ci.org/fkling/deep-equal-ident)
 
-## Deep comparison with object identity checks
 
 This function performs a deep comparison between the two values `a` and `b`. It
 has the same signature and functionality as [lodash's isEqual function](http://lodash.com/docs#isEqual),
