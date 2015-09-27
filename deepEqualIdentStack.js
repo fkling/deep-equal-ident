@@ -18,6 +18,8 @@ function _stack(a, b) {
         // leave this to isEqual
       }
       break;
+    } else if (stackB[index] === b) {
+      return false;
     }
   }
   if (stackA[index] !== a) { // no match, found add to stack
