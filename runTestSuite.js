@@ -10,6 +10,7 @@ function runTestSuite(name, deepEqualIdent) {
       var bar = [b, {x: b}];
 
       expect(deepEqualIdent(foo, bar)).toBe(true);
+      expect(deepEqualIdent(bar, foo)).toBe(true);
     });
 
     it('accepts structures without repeated objects', function() {
@@ -21,6 +22,7 @@ function runTestSuite(name, deepEqualIdent) {
       var bar = [c, {x: d}];
 
       expect(deepEqualIdent(foo, bar)).toBe(true);
+      expect(deepEqualIdent(bar, foo)).toBe(true);
     });
 
     it("doesn't accept similar structures", function() {
@@ -31,6 +33,7 @@ function runTestSuite(name, deepEqualIdent) {
       var bar = [b, {x: c}];
 
       expect(deepEqualIdent(foo, bar)).toBe(false);
+      expect(deepEqualIdent(bar, foo)).toBe(false);
     });
 
     it('accepts cyclic identical structures', function() {
@@ -40,15 +43,30 @@ function runTestSuite(name, deepEqualIdent) {
       bar.push({x: 0, y: bar});
 
       expect(deepEqualIdent(foo, bar)).toBe(true);
+      expect(deepEqualIdent(bar, foo)).toBe(true);
     });
 
-    it("doesn't accept cyclic similar structures", function() {
+    it.only("doesn't accept cyclic similar structures", function() {
       var foo = [1, 2, 3];
       foo.push({x: 0, y: foo});
       var bar = [1, 2, 3];
       bar.push({x: 0, y: foo}); // notice foo here
 
       expect(deepEqualIdent(foo, bar)).toBe(false);
+      expect(deepEqualIdent(bar, foo)).toBe(false);
+
+      /*
+      // This test doesn't pass because of the way how lodash traverses the data
+      // structure. If it finds `a === b` it doesn't traverse into either of
+      // them, so we don't know that the second element already exists within
+      // the first.
+      //
+      var arr = [[]];
+      foo = [arr, arr[0]];
+      bar = [arr, []];
+      expect(deepEqualIdent(foo, bar)).toBe(false);
+      expect(deepEqualIdent(bar, foo)).toBe(false);
+      */
     });
 
     it("doesn't accept this weird cross-referential structure", function() {

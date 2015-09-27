@@ -209,3 +209,19 @@ runs in.
 An implementation using Maps is included and is used if `global.Map` is
 available.
 
+### Caveats
+
+`deep-equal-ident` **incorrectly** assumes the following structures to be
+equal:
+
+```javascript
+var a = [[]];
+var foo = [a, a[0]];
+var bar = [a, []];
+deepEqualIdent(foo, bar); // true
+```
+
+That's because lodash doesn't traverse deeper into the first element (because
+`foo[0] === bar[0]`, so the algorithm doesn't know about the objects inside
+`foo[0]` (and `bar[0]`) and therefore cannot detect whether they repeat
+elsewhere in the data structure.
