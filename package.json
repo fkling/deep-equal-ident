@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "chai": "^3.0.0",
-    "jest-cli": "^0.4.10"
+    "jest-cli": "^0.5.8"
   },
   "repository": {
     "type": "git",
