@@ -59,6 +59,7 @@ function runTestSuite(name, deepEqualIdent) {
       var bar = [a, b];
 
       expect(deepEqualIdent(foo, bar)).toBe(false);
+      expect(deepEqualIdent(bar, foo)).toBe(false);
     });
   });
 }
