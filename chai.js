@@ -1,5 +1,4 @@
-/*jshint node:true*/
-"use strict";
+'use strict';
 
 var deepEqualIdent = require('./deepEqualIdentStack');
 

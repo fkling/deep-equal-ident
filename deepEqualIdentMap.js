@@ -1,5 +1,4 @@
-/*jshint node:true*/
-"use strict";
+'use strict';
 
 var isEqual = require('lodash.isequal');
 var _comparator = require('./_comparator');
@@ -12,7 +11,7 @@ function deepEqualIdentMap(a, b, callback, thisArg) {
 
   // Defined in here so that this module can be loaded even if maps are not
   // supported.
-  function _map(a, b) {
+  function _map(a, b) { // eslint-disable-line no-shadow
     if (!map.has(a) && !map.has(b)) {
       map.set(a, b);
       map.set(b, a);

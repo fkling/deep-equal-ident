@@ -1,5 +1,4 @@
-/*jshint node:true*/
-"use strict";
+'use strict';
 
 var isEqual = require('lodash.isequal');
 var _comparator = require('./_comparator');
@@ -56,11 +55,11 @@ function _tag(a, b) {
  * @param {*} thisArg The `this` value of the callback
  * @return {bool}
  */
-function isEqualIdentTag(a, b, callback, this_arg) {
+function isEqualIdentTag(a, b, callback, thisArg) {
   var result = isEqual(
       a,
       b,
-      _comparator.bind(null, _tag, callback, this_arg)
+      _comparator.bind(null, _tag, callback, thisArg)
   );
   //
   // clear tags

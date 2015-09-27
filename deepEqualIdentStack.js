@@ -1,5 +1,4 @@
-/*jshint node:true*/
-"use strict";
+'use strict';
 
 var isEqual = require('lodash.isequal');
 var _comparator = require('./_comparator');
@@ -9,7 +8,7 @@ var stackB = [];
 
 function _stack(a, b) {
   var index = stackA.length;
-  while(0 < index--) {
+  while (index-- > 0) {
     if (stackA[index] === a) {
       if (stackB[index] !== b) {
         return false;
