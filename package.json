@@ -1,6 +1,6 @@
 {
   "name": "deep-equal-ident",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A function to test for identical deep equality (based on lodash's isEqual).",
   "main": "index.js",
   "scripts": {
