@@ -138,13 +138,18 @@ var bar = [a, {x: b}];
 Graph representations:
 
 ```
-   - foo -        - bar -
-  |       |      |       |
-  v       v      v       v
-  a <--- { }     a      { }
-                         |
-                         v
-                         b
+  +---- foo ----+       +---- foo ----+
+  |             |       |             |
+  |             |       |             |
+  v             v       v             v
+
+  a  <-------- { }      a            { }
+
+                                      |
+                                      |
+                                      v
+
+                                      b
 ```
 
 I think this makes it very obvious that the structure of `foo` and `bar` are
